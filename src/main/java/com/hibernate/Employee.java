@@ -10,6 +10,7 @@ public class Employee {
     @Column(name="Workers name")
     private String empName ;
     private int age ;
+   // @ManyToMany 
     @OneToMany(mappedBy = "emp")
     private List<Insentives> ins ;
 
