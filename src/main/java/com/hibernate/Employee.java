@@ -1,17 +1,26 @@
 package com.hibernate;
 import jakarta.persistence.*;
 
-@Entity
-@Table(name="xyz")
+import java.util.List;
 
+@Entity
 public class Employee {
     @Id
     private int empId ;
-    @Column(name="employee name")
+    @Column(name="Workers name")
     private String empName ;
-
-    @Transient
     private int age ;
+    @OneToMany(mappedBy = "emp")
+    private List<Insentives> ins ;
+
+    public List<Insentives> getIns() {
+        return ins;
+    }
+
+    public Employee setIns(List<Insentives> ins) {
+        this.ins = ins;
+        return this;
+    }
 
     public int getEmpId() {
         return empId;
