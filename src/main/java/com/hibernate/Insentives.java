@@ -1,6 +1,6 @@
 package com.hibernate;
-
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Insentives
@@ -10,14 +10,14 @@ public class Insentives
     private String Car ;
     private String House ;
 
-    @ManyToOne
-    private Employee emp ;
+    @ManyToMany(mappedBy = "ins")
+    private List<Employee> emp ; //List is used for many to many if that was many to one than we cant utilized list
 
-    public Employee getEmp() {
+    public List<Employee> getEmp() {
         return emp;
     }
 
-    public Insentives setEmp(Employee emp) {
+    public Insentives setEmp(List<Employee> emp) {
         this.emp = emp;
         return this;
     }
