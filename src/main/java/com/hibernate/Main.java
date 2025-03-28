@@ -61,6 +61,61 @@ public class Main {
         s.close();
         sf.close();
 
+        /* Insentives ins = new Insentives();
+        ins.setInsId(104);
+        ins.setCar("BYD");
+        ins.setHouse("320");
+
+        Insentives ins1 = new Insentives();
+        ins1.setInsId(105);
+        ins1.setCar("Tea");
+        ins1.setHouse("20");
+
+        Insentives ins2 = new Insentives();
+        ins2.setInsId(106);
+        ins2.setCar("alto");
+        ins2.setHouse("240");
+        System.out.println(ins1.getEmp());
+
+
+        Employee s2 = new Employee();
+        s2.setAge(22);
+        s2.setEmpId(13);
+        s2.setEmpName("Anas");
+        s2.setIns(Arrays.asList(ins,ins1));
+
+        Employee s3 = new Employee();
+        s2.setAge(20);
+        s2.setEmpId(11);
+        s2.setEmpName("Ansar");
+        s2.setIns(Arrays.asList(ins,ins2));
+
+
+        ins.setEmp(Arrays.asList(s2));
+        ins1.setEmp(Arrays.asList(s3,s2));
+        ins2.setEmp(Arrays.asList(s3));
+
+        Configuration cf = new Configuration().
+        addAnnotatedClass(com.hibernate.Employee.class).
+        addAnnotatedClass(com.hibernate.Insentives.class);
+
+        cf.configure();//by default its "hibernate.cfg.xml"
+        SessionFactory sf = cf.buildSessionFactory();
+        Session s = sf.openSession();
+        Transaction transaction = s.beginTransaction();
+
+        s.persist(s2);
+        s.persist(s3);
+        s.persist(ins);
+        s.persist(ins1);
+        s.persist(ins2);
+
+
+        transaction.commit();
+        s.close();
+        sf.close();
+*/
+
 
     }
 }
